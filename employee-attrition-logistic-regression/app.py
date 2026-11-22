@@ -1,3 +1,5 @@
+from pathlib import Path
+
 import pandas as pd
 import streamlit as st
 from sklearn.model_selection import train_test_split
@@ -7,7 +9,8 @@ from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_sc
 
 st.set_page_config(page_title="Employee Attrition Prediction", page_icon="👥")
 
-CSV_FILE = "WA_Fn-UseC_-HR-Employee-Attrition.csv"
+# Look for the CSV in the same folder as this file
+CSV_FILE = Path(__file__).parent / "WA_Fn-UseC_-HR-Employee-Attrition.csv"
 
 
 # ---------- Same preprocessing as the notebook ----------
