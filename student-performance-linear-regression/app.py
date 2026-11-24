@@ -79,13 +79,3 @@ if st.button("Predict Performance Index", type="primary", use_container_width=Tr
         "Note: Predictions are statistical estimates based on linear regression and "
         "historical patterns, not a guaranteed exam outcome."
     )
-```[cite: 1]
-
----
-
-### How to Put This Into Your Project
-1. Save the **`README.md`** text inside your project folder on GitHub.
-2. Replace your **`app.py`** with the code above and commit.
-3. Make sure **`requirements.txt`** in that same folder has just `streamlit`, `pandas`, and `scikit-learn` (one per line), then reboot your app on Streamlit Cloud.
-
-Would you also like to add model evaluation metrics (like $R^2$ score or MAE) or feature weights to the app?
