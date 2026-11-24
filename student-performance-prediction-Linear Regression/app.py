@@ -1,13 +1,15 @@
-import streamlit as st
+from pathlib import Path
 import pandas as pd
 from sklearn.linear_model import LinearRegression
+import streamlit as st
 
 st.set_page_config(page_title="Student Performance Predictor", page_icon="🎓")
 
 
 @st.cache_resource
 def train_model():
-    df = pd.read_csv("Student_Performance.csv")
+    csv_path = Path(__file__).resolve().parent / "Student_Performance.csv"
+    df = pd.read_csv(csv_path)
     df = df.drop_duplicates().reset_index(drop=True)
     df["Extracurricular Activities"] = df["Extracurricular Activities"].map({"Yes": 1, "No": 0})
 
